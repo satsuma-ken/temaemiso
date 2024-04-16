@@ -34,7 +34,7 @@ class Content(BaseModel):
 
     article_id = models.ForeignKey(
         Article,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
     )
     content_id = models.AutoField(primary_key=True)
     content_order = models.SmallIntegerField()
