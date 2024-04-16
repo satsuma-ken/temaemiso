@@ -40,9 +40,3 @@ class Command(BaseCommand):
                 """,
             )
             new_content.save()
-
-def test_case_01():
-    make_article()
-
-if __name__ == "__main__":
-    test_case_01()
