@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.12"
 django = "^5.0.4"
 psycopg2 = "^2.9.9"
+gunicorn = "^22.0.0"
+django-bootstrap5 = "^24.1"
+pymemcache = "^4.0.0"
 
 
 [build-system]

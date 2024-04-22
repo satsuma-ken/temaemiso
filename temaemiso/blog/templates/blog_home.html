@@ -1,0 +1,13 @@
+<!--
+     ヘッダ・フッタやcss/jsなどのstaticファイルを読み込むblog_baseに、
+     main_kanbanを備えた基本的なレイアウト
+-->
+{% extends 'blog_layout_base.html' %}
+
+{% block content %}<!-- ここにコンテンツを挿入 -->
+
+{% include 'blog_layout_main_kanban.html' %}
+
+{% include 'blog_layout_main_contents.html' %}
+
+{% endblock content %}<!-- ここまでにコンテンツを挿入 -->

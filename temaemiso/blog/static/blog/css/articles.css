@@ -1,0 +1,179 @@
+/* リンクのスタイル */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ヘッダーのスタイル */
+h1,
+h2,
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* リストのスタイル */
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* プロパティのスタイル */
+.metadata-container {
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.metadata-properties-heading {
+    font-weight: bold;
+}
+
+.metadata-properties-title {
+    font-weight: bold;
+}
+
+/* プロパティ追加ボタンのスタイル */
+.metadata-add-button {
+    margin-top: 5px;
+}
+
+/* コードブロックのスタイル */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/*tagの設定 */
+.tag {
+    vertical-align: middle;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #badaff;
+    margin: 0px;
+    padding: 2px 10px;
+}
+
+/* タスクリストのスタイル */
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-right: 5px;
+}
+
+/* コールアウトのスタイル */
+.callout {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.callout-title {
+    font-weight: bold;
+    display: flex;
+    vertical-align: middle;
+}
+
+.callout-title-inner {
+    padding: 3px;
+}
+
+.callout-content {
+    margin-top: 5px;
+}
+
+.callout {
+    &[data-callout="caution"] {
+        background-color: #fef2e2;
+        /* 警告の背景色 */
+        border: 1px solid #f0ad4e;
+        color: #ff9500;
+    }
+
+    &[data-callout="tips"] {
+        background-color: #9bc9ff;
+        /* 警告の背景色 */
+        border: 1px solid #086ddd;
+        color: #1a57ff;
+    }
+
+    &[data-callout="info"] {
+        background-color: #9bc9ff;
+        /* 警告の背景色 */
+        border: 1px solid #086ddd;
+        color: #1a57ff;
+    }
+
+    /* 警告の境界線 */
+    padding: 10px;
+    /* 警告の内側の余白 */
+    margin-bottom: 15px;
+    /* 警告の下部余白 */
+}
+
+.callout p {
+    color: #4d4d4d;
+}
+
+.callout strong {
+    color: #ff2365;
+}
+
+/* インラインコードのスタイル */
+code {
+    background-color: #f4f4f4;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.language-shell {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.copy-code-button {
+    position: absolute;
+    /* 絶対位置付け */
+    top: 10px;
+    /* 上側に配置 */
+    right: 10px;
+    /* 右側に配置 */
+    padding: 2px 5px;
+    /* ボタンの余白 */
+    background-color: #007bff;
+    /* ボタンの背景色 */
+    color: #fff;
+    /* ボタンの文字色 */
+    border: none;
+    /* ボタンの境界線を削除 */
+    border-radius: 4px;
+    /* ボタンの角丸 */
+    cursor: pointer;
+    /* ポインターを指す */
+    justify-content: flex-end;
+    &:hover{
+        background-color: #51a5ff;
+    }
+    &:active{
+        background-color:  #004794;
+    }
+}
+
+.heading-collapse-indicator.collapse-indicator.collapse-icon {
+    display: none;
+}
