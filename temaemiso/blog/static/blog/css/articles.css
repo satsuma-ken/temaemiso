@@ -166,14 +166,17 @@ code {
     cursor: pointer;
     /* ポインターを指す */
     justify-content: flex-end;
-    &:hover{
+
+    &:hover {
         background-color: #51a5ff;
     }
-    &:active{
-        background-color:  #004794;
+
+    &:active {
+        background-color: #004794;
     }
 }
 
-.heading-collapse-indicator.collapse-indicator.collapse-icon {
+.heading-collapse-indicator.collapse-indicator.collapse-icon,
+.markdown-preview-pusher {
     display: none;
 }
