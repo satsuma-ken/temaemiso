@@ -1,361 +1,1018 @@
-<div class="markdown-preview-sizer markdown-preview-section" style="padding-bottom: 537px; min-height: 4026px;">
-    <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 49px;"></div>
-    <div>
-        <h1 data-heading="Python環境のセットアップ手順">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Python環境のセットアップ手順
-        </h1>
-    </div>
-    <div>
-        <p><a href="#Python" class="tag" target="_blank" rel="noopener">#Python</a> <a href="#Poetry" class="tag"
-                target="_blank" rel="noopener">#Poetry</a> <a href="#pip" class="tag" target="_blank"
-                rel="noopener">#pip</a> <a href="#pipx" class="tag" target="_blank" rel="noopener">#pipx</a> </p>
-    </div>
-    <div>
-        <h2 data-heading="Python環境のセットアップ概要">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Python環境のセットアップ概要
-        </h2>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <p>Pythonの環境のセットアップには以下のソフトウェアのインストールが必要です。<br>
-            失敗しないように一つずつ確実にインストールしていきます。</p>
-    </div>
-    <div>
-        <ul class="contains-task-list has-list-bullet">
-            <li data-line="0" data-task="" class="task-list-item">
-                <div class="list-bullet"></div><input data-line="0" type="checkbox"
-                    class="task-list-item-checkbox">Python
-            </li>
-            <li data-line="1" data-task="" class="task-list-item">
-                <div class="list-bullet"></div><input data-line="1" type="checkbox" class="task-list-item-checkbox">pip
-            </li>
-            <li data-line="2" data-task="" class="task-list-item">
-                <div class="list-bullet"></div><input data-line="2" type="checkbox" class="task-list-item-checkbox">pipx
-            </li>
-            <li data-line="3" data-task="" class="task-list-item">
-                <div class="list-bullet"></div><input data-line="3" type="checkbox"
-                    class="task-list-item-checkbox">poetry
-            </li>
-        </ul>
-    </div>
-    <div>
-        <h2 data-heading="Python環境のセットアップ手順">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>Python環境のセットアップ手順
-        </h2>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <h3 data-heading="1. **Python**のインストール">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>1. <strong>Python</strong>のインストール
-        </h3>
-    </div>
-    <div>
-        <p><a data-tooltip-position="top"
-                aria-label="https://realpython.com/installing-python/#how-to-install-from-the-full-installer"
-                rel="noopener" class="external-link"
-                href="https://realpython.com/installing-python/#how-to-install-from-the-full-installer"
-                target="_blank">how-to-install-from-the-full-installer</a> に従いインストールを行う</p>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="caution" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
-                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
-                        <path d="M12 9v4"></path>
-                        <path d="M12 17h.01"></path>
-                    </svg></div>
-                <div class="callout-title-inner">環境変数の設定の仕方がわからないときは有識者に確認してください。</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <h3 data-heading="2. **pip**のインストール">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>2. <strong>pip</strong>のインストール
-        </h3>
-    </div>
-    <div>
-        <p>以下のコマンドを実行（詳細は<a data-tooltip-position="top" aria-label="https://pip.pypa.io/en/stable/installation/"
-                rel="noopener" class="external-link" href="https://pip.pypa.io/en/stable/installation/"
-                target="_blank">こちら</a>）</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>py -m ensurepip --upgrade</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="tips" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-pencil">
-                        <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>
-                        <path d="m15 5 4 4"></path>
-                    </svg></div>
-                <div class="callout-title-inner">Tips</div>
-            </div>
-            <div class="callout-content">
-                <p>基本的にpipはPythonをインストールした際に一緒にインストールされます<br>
-                    <strong>Requirement already satisfied: pip in ...</strong><br>
-                    のような文言が表示されている場合はインストール済みですので、<br>
-                    次の手順に移ってください。
-                </p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <h3 data-heading="3. **pipx**のインストール">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>3. <strong>pipx</strong>のインストール
-        </h3>
-    </div>
-    <div>
-        <p>以下のコマンドを実行（詳細は<a data-tooltip-position="top"
-                aria-label="https://pipx.pypa.io/stable/installation/#on-windows" rel="noopener" class="external-link"
-                href="https://pipx.pypa.io/stable/installation/#on-windows" target="_blank">こちら</a>）</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>span>py -m pip install --user pipx</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <p>依存関係のあるソフトウェアのダウンロードが走る</p>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-info">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 16v-4"></path>
-                        <path d="M12 8h.01"></path>
-                    </svg></div>
-                <div class="callout-title-inner">最後に以下のような文言が出ていればOK</div>
-            </div>
-            <div class="callout-content">
-                <p>WARNING: The script pipx.exe is installed in
-                    <code>&lt;USER folder&gt;\AppData\Roaming\Python\Python3x\Scripts</code> which is not on PATH</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p><code>...\AppData\Roaming\Python\Python3x\Scripts\Scripts</code>の部分をコピーし<br>
-            以下のコマンドを実行</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>cd ...\AppData\Roaming\Python\Python3x\Scripts\Scripts</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <p><code>ls</code>コマンドなどで<code>pipx.exe</code>があることを確認し、以下のコマンドを実行</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>.\pipx.exe ensurepath</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <h3 data-heading="4. **poetry**のインストール">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>4. <strong>poetry</strong>のインストール
-        </h3>
-    </div>
-    <div>
-        <p>以下のコマンドを実行（詳細は<a data-tooltip-position="top"
-                aria-label="https://python-poetry.org/docs/#installing-with-pipx" rel="noopener" class="external-link"
-                href="https://python-poetry.org/docs/#installing-with-pipx" target="_blank">こちら</a>）</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>pipx install poetry</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="is-loaded language-shell"><span>span>py -m pip install --user -U pipx</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-info">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 16v-4"></path>
-                        <path d="M12 8h.01"></path>
-                    </svg></div>
-                <div class="callout-title-inner">最後に以下のような文言が出ていればOK</div>
-            </div>
-            <div class="callout-content">
-                <p>done! ✨ 🌟 ✨</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <h2 data-heading="次のステップ">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>次のステップ
-        </h2>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <p>上記までで、python環境の構築は完了です！<br>
-            プロジェクト名などが決まっている方は<br>
-            次のpoetry環境の構築までやってしまいましょう！</p>
-    </div>
-    <div>
-        <hr>
-    </div>
-    <div>
-        <h3 data-heading="1. Poetryプロジェクトの作成">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>1. Poetryプロジェクトの作成
-        </h3>
-    </div>
-    <div>
-        <p>まだディレクトリがない場合は以下を実行<br>
-            ※my-projectは任意のプロジェクト名に変更してください。</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span>poetry new my-project</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <p>既存のディレクトリをpoetry環境化する場合は以下のコマンドを実行</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span>poetry init</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="caution" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
-                        <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
-                        <path d="M12 9v4"></path>
-                        <path d="M12 17h.01"></path>
-                    </svg></div>
-                <div class="callout-title-inner">必ずPoetry環境化したいディレクトリに移動してから実行してください</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p>コマンド実行時にいろいろ尋ねるプロンプトが出てきますが、<br>
-            すべてEnterを押してください。</p>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-info">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M12 16v-4"></path>
-                        <path d="M12 8h.01"></path>
-                    </svg></div>
-                <div class="callout-title-inner">実行完了後 <code>poetry.toml</code> というファイルが生成されます。</div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <h3 data-heading="2. 依存関係の追加&amp;インストール">
-            <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="svg-icon right-triangle">
-                    <path d="M3 8L12 17L21 8"></path>
-                </svg></div>2. 依存関係の追加 and インストール
-        </h3>
-    </div>
-    <div>
-        <p>プロジェクトに必要な依存関係を追加<br>
-            ※以下は<code>Flask</code>をインストールする例です。</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span>poetry add flask</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-    <div>
-        <div data-callout-metadata="" data-callout-fold="" data-callout="tips" class="callout">
-            <div class="callout-title">
-                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="svg-icon lucide-pencil">
-                        <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>
-                        <path d="m15 5 4 4"></path>
-                    </svg></div>
-                <div class="callout-title-inner">Tips</div>
-            </div>
-            <div class="callout-content">
-                <p>「依存関係ってなに？」と思った方は、<br>
-                    現時点では「Poetryで作成した仮想環境にライブラリを追加する」<br>
-                    というイメージを持っておくとよいです。</p>
-            </div>
-        </div>
-    </div>
-    <div>
-        <p>依存関係をインストールpoetry環境へインストール</p>
-    </div>
-    <div>
-        <pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span>poetry install</span>
-    </code><button class="copy-code-button">コピー</button></pre>
-    </div>
-</div>
+
+
+	<div class="webpage-container workspace">
+		<div class="document-container markdown-reading-view hide">
+			<div
+				class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width">
+				<style id="MJX-CHTML-styles"></style>
+				<div class="markdown-preview-sizer markdown-preview-section">
+					<h1 class="page-title heading inline-title" id="Djangoのセットアップ(Poetry)">Djangoのセットアップ(Poetry)</h1>
+					<div class="heading-wrapper">
+						<div class="heading-children">
+							<div>
+								<p><a href="?query=tag:Python" class="tag" target="_blank" rel="noopener">#Python</a> <a
+										href="?query=tag:Django" class="tag" target="_blank" rel="noopener">#Django</a>
+									<a href="?query=tag:Poetry" class="tag" target="_blank" rel="noopener">#Poetry</a>
+								</p>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoのセットアップ概要(Poetry)" class="heading" id="Djangoのセットアップ概要(Poetry)">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoのセットアップ概要(Poetry)
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div>
+										<ul class="contains-task-list">
+											<li data-line="0" data-task="" class="task-list-item"><input data-line="0"
+													type="checkbox" class="task-list-item-checkbox">Djangoのインストール</li>
+											<li data-line="1" data-task="" class="task-list-item"><input data-line="1"
+													type="checkbox" class="task-list-item-checkbox">Djangoプロジェクトの開始</li>
+											<li data-line="2" data-task="" class="task-list-item"><input data-line="2"
+													type="checkbox" class="task-list-item-checkbox">Djangoの起動確認</li>
+											<li data-line="3" data-task="" class="task-list-item"><input data-line="3"
+													type="checkbox" class="task-list-item-checkbox">Djangoアプリケーション作成
+											</li>
+											<li data-line="4" data-task="" class="task-list-item"><input data-line="4"
+													type="checkbox" class="task-list-item-checkbox">Djangoの各種設定</li>
+										</ul>
+									</div>
+									<div>
+										<div data-callout-metadata="" data-callout-fold="" data-callout="caution"
+											class="callout">
+											<div class="callout-title">
+												<div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
+														<path
+															d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+														</path>
+														<path d="M12 9v4"></path>
+														<path d="M12 17h.01"></path>
+													</svg></div>
+												<div class="callout-title-inner">注意事項①</div>
+											</div>
+											<div class="callout-content">
+												<p>本ページでは「temaemiso」というプロジェクト名で作成を進めています。<br>
+													各コマンドの「temaemiso」という部分は任意のプロジェクト名に置き換えてお読みください。</p>
+											</div>
+										</div>
+									</div>
+									<div>
+										<div data-callout-metadata="" data-callout-fold="" data-callout="caution"
+											class="callout">
+											<div class="callout-title">
+												<div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
+														<path
+															d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+														</path>
+														<path d="M12 9v4"></path>
+														<path d="M12 17h.01"></path>
+													</svg></div>
+												<div class="callout-title-inner">注意事項②</div>
+											</div>
+											<div class="callout-content">
+												<p>本ページではPoetry環境上にDjango環境をセットアップする手順となります。<br>
+													そのため、Django起動などのコマンドが公式ドキュメントとは異なります。<br>
+													※Poetry上ではPythonスクリプトを起動する方法が異なるためです。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoのインストール" class="heading" id="Djangoのインストール">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoのインストール
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div>
+										<p>Poetryの依存関係にDjangoを追加し、インストールする。</p>
+									</div>
+									<div>
+										<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry <span class="token function">add</span> django
+</code><button class="copy-code-button">コピー</button></pre>
+									</div>
+									<div>
+										<div data-callout-metadata="" data-callout-fold="" data-callout="caution"
+											class="callout">
+											<div class="callout-title">
+												<div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
+														<path
+															d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+														</path>
+														<path d="M12 9v4"></path>
+														<path d="M12 17h.01"></path>
+													</svg></div>
+												<div class="callout-title-inner">Postgresを設定する場合は以下のコマンドも実施</div>
+											</div>
+											<div class="callout-content">
+												<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry <span class="token function">add</span> psycopg2
+</code><button class="copy-code-button">コピー</button></pre>
+												<p>設定しない場合は飛ばしてよいです。<br>
+													<a data-tooltip-position="top" aria-label="" rel="noopener"
+														class="external-link" href="" target="_blank">postgresqlの設定</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoプロジェクトの開始" class="heading" id="Djangoプロジェクトの開始">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoプロジェクトの開始
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div>
+										<p>以下コマンドでDjangoプロジェクトを作成・開始します。<br>
+											※プロジェクトが何かについては後述の「Djangoアプリケーション設定」にて触れます。<br>
+											<a class="internal-link" data-href="Djangoの各種設定" href="Djangoの各種設定"
+												target="_self" rel="noopener">Django公式ドキュメント(project)</a>でも言及があります
+										</p>
+									</div>
+									<div>
+										<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python django-admin startproject temaemiso
+</code><button class="copy-code-button">コピー</button></pre>
+									</div>
+									<div>
+										<div data-callout-metadata="" data-callout-fold="" data-callout="caution"
+											class="callout">
+											<div class="callout-title">
+												<div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
+														<path
+															d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+														</path>
+														<path d="M12 9v4"></path>
+														<path d="M12 17h.01"></path>
+													</svg></div>
+												<div class="callout-title-inner">すでにPoetryやgitの設定などですでにディレクトリがある場合</div>
+											</div>
+											<div class="callout-content">
+												<p>ディレクトリ内で以下のコマンドを実行してください。</p>
+												<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python django-admin startproject myproject <span class="token builtin class-name">.</span>
+</code><button class="copy-code-button">コピー</button></pre>
+												<p>カレントディレクトリをプロジェクトのディレクトリとしています。<br>
+													これにより、余分な階層を作らないようにします。</p>
+											</div>
+										</div>
+									</div>
+									<div>
+										<p>以下のようなディレクトリが生成されています。<br>
+											※現時点では詳細な理解は不要（詳細を知りたい方は<a data-tooltip-position="top"
+												aria-label="https://docs.djangoproject.com/ja/4.2/intro/tutorial01/#creating-a-project"
+												rel="noopener" class="external-link"
+												href="https://docs.djangoproject.com/ja/4.2/intro/tutorial01/#creating-a-project"
+												target="_blank">こちら</a>）</p>
+									</div>
+									<div>
+										<pre class="language-text" tabindex="0"><code class="language-text is-loaded">repository_name/
+manage.py       # プロジェクトに対する様々な操作を行うユーティリティ
+temaemiso/      # プロジェクトのPythonパッケージ
+	__init__.py # このディレクトリがPythonパッケージであることを知らせる
+	settings.py # プロジェクトの設定ファイル
+	urls.py     # プロジェクトのURL宣言（プロジェクトの目次のようなもの）
+	asgi.py     # ASGI互換Webサーバのエントリポイント
+	wsgi.py     # WSGI互換Webサーバのエントリポイント
+</code><button class="copy-code-button">コピー</button></pre>
+									</div>
+								</div>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoの起動確認" class="heading" id="Djangoの起動確認">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoの起動確認
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div>
+										<p>以下コマンドでDjango開発サーバーを起動</p>
+									</div>
+									<div>
+										<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python manage.py runserver
+</code><button class="copy-code-button">コピー</button></pre>
+									</div>
+									<div>
+										<div data-callout-metadata="" data-callout-fold="" data-callout="caution"
+											class="callout">
+											<div class="callout-title">
+												<div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg"
+														width="24" height="24" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2" stroke-linecap="round"
+														stroke-linejoin="round" class="svg-icon lucide-alert-triangle">
+														<path
+															d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+														</path>
+														<path d="M12 9v4"></path>
+														<path d="M12 17h.01"></path>
+													</svg></div>
+												<div class="callout-title-inner">ここでエラーになってしまう場合、前述の手順をご確認ください。</div>
+											</div>
+											<div class="callout-content">
+												<p>考えられるエラー原因</p>
+												<ul>
+													<li data-line="2">コマンドの打ち間違い</li>
+													<li data-line="3">前提条件の間違い※本ページはPoetry x Django 環境の構築手順です。</li>
+													<li data-line="4">Poetryの設定・起動の誤り※<a data-tooltip-position="top"
+															aria-label="" rel="noopener" class="external-link" href=""
+															target="_blank">Poetry設定</a>をご確認ください。</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoアプリケーション設定" class="heading" id="Djangoアプリケーション設定">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoアプリケーション設定
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="1. アプリケーションの作成" class="heading" id="1._アプリケーションの作成">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>1. アプリケーションの作成
+										</h3>
+										<div class="heading-children">
+											<div>
+												<p>「アプリとかプロジェクトとか一体なんなんだ。。。」という気持ちはいったんおいて、<br>
+													以下コマンドで<code>blog</code>アプリケーションを作成します。</p>
+											</div>
+											<div>
+												<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span class="token function">mkdir</span> temaemiso/blog
+poetry run python manage.py startapp blog temaemiso/blog
+</code><button class="copy-code-button">コピー</button></pre>
+											</div>
+											<div>
+												<div data-callout-metadata="" data-callout-fold=""
+													data-callout="caution" class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-alert-triangle">
+																<path
+																	d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+																</path>
+																<path d="M12 9v4"></path>
+																<path d="M12 17h.01"></path>
+															</svg></div>
+														<div class="callout-title-inner">Caution</div>
+													</div>
+													<div class="callout-content">
+														<p>今回はサブモジュールとしてblogアプリケーションを作成したかったため<br>
+															事前にディレクトリを作成しています。</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div data-callout-metadata="" data-callout-fold="" data-callout="info"
+													class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-info">
+																<circle cx="12" cy="12" r="10"></circle>
+																<path d="M12 16v-4"></path>
+																<path d="M12 8h.01"></path>
+															</svg></div>
+														<div class="callout-title-inner"> トップレベルモジュールとして設定したい場合</div>
+													</div>
+													<div class="callout-content">
+														<p>アプリケーションはPythonパス上であればどこにでも配置できます。<br>
+															トップレベルモジュールとして設定したい場合は以下コマンドを使用してください。</p>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">python run python manage.py start app blog
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div data-callout-metadata="" data-callout-fold="" data-callout="tips"
+													class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-pencil">
+																<path
+																	d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z">
+																</path>
+																<path d="m15 5 4 4"></path>
+															</svg></div>
+														<div class="callout-title-inner">プロジェクトとアプリケーション</div>
+													</div>
+													<div class="callout-content">
+														<p>プロジェクトとアプリの違いは何でしょうか？
+															アプリとは、ブログシステム、公的記録のデータベース、小規模な投票アプリなど、何かを行う Web
+															アプリケーションです。プロジェクトは、特定のウェブサイトの構成とアプリのコレクションです。プロジェクトには複数のアプリを含めることができます。
+															アプリは複数のプロジェクトに存在できます。<br>
+															※<a data-tooltip-position="top"
+																aria-label="https://docs.djangoproject.com/ja/4.2/intro/tutorial01/#creating-the-polls-app"
+																rel="noopener" class="external-link"
+																href="https://docs.djangoproject.com/ja/4.2/intro/tutorial01/#creating-the-polls-app"
+																target="_blank">公式ドキュメント（プロジェクトとアプリケーション）</a>より引用</p>
+													</div>
+												</div>
+											</div>
+											<div>
+												<p>厳密には違うと思いますが、以下のような最初の段階では<br>
+													以下の認識でいればよいかと思います。</p>
+											</div>
+											<div>
+												<ul>
+													<li data-line="0"><code>Project</code>: サイト全体</li>
+													<li data-line="1"><code>app</code>: 各種タブに設定されたページや機能<br>
+														<span alt="Pasted image 20240413210958.png"
+															src="Pasted image 20240413210958.png"
+															class="internal-embed media-embed image-embed is-loaded"><img
+																alt="Pasted image 20240413210958.png"
+																src="05_programming/00_python/99_attachments/pasted-image-20240413210958.png"></span>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<hr>
+											</div>
+										</div>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="2. ビューの作成" class="heading" id="2._ビューの作成">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>2. ビューの作成
+										</h3>
+										<div class="heading-children">
+											<div>
+												<p><code>blog</code>配下の<code>views.py</code>を以下の通りに編集する。</p>
+											</div>
+											<div>
+												<pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># blog/views.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">"Hello, world. You're at the blog index."</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">コピー</button></pre>
+											</div>
+											<div>
+												<hr>
+											</div>
+										</div>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="3. URLの対応付け" class="heading" id="3._URLの対応付け">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>3. URLの対応付け
+										</h3>
+										<div class="heading-children">
+											<div>
+												<p><code>blog</code>配下に<code>urls.py</code>というファイルを作成し、以下の通りに編集する。</p>
+											</div>
+											<div>
+												<pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># blog/urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+path<span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>index<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"index"</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span>
+</code><button class="copy-code-button">コピー</button></pre>
+											</div>
+											<div>
+												<p>次にプロジェクトのURLにモジュールの記述を反映させます。<br>
+													<code>temaemiso</code>配下の<code>urls.py</code>を以下の通りに編集します。
+												</p>
+											</div>
+											<div>
+												<pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token comment"># temaemiso/urls.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> include<span class="token punctuation">,</span> path
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+path<span class="token punctuation">(</span><span class="token string">"blog/"</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">"temaemiso.blog.urls"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment"># モジュール階層に注意</span>
+path<span class="token punctuation">(</span><span class="token string">"admin/"</span><span class="token punctuation">,</span> admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code><button class="copy-code-button">コピー</button></pre>
+											</div>
+											<div>
+												<div data-callout-metadata="" data-callout-fold=""
+													data-callout="caution" class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-alert-triangle">
+																<path
+																	d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z">
+																</path>
+																<path d="M12 9v4"></path>
+																<path d="M12 17h.01"></path>
+															</svg></div>
+														<div class="callout-title-inner">Caution</div>
+													</div>
+													<div class="callout-content">
+														<p>includeに読み込ませる際に、モジュール階層を意識しないと、エラーが出てしまう。</p>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">Module not found Error.
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+												</div>
+											</div>
+											<div>
+												<p>上記の設定を図で表すと以下の通り。<br>
+													<span alt="Pasted image 20240413214315.png"
+														src="Pasted image 20240413214315.png"
+														class="internal-embed media-embed image-embed is-loaded"><img
+															alt="Pasted image 20240413214315.png"
+															src="05_programming/00_python/99_attachments/pasted-image-20240413214315.png"></span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="heading-wrapper">
+								<h2 data-heading="Djangoの各種設定" class="heading" id="Djangoの各種設定">
+									<div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg
+											xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round"
+											class="svg-icon right-triangle">
+											<path d="M3 8L12 17L21 8"></path>
+										</svg></div>Djangoの各種設定
+								</h2>
+								<div class="heading-children">
+									<div>
+										<hr>
+									</div>
+									<div>
+										<p>ここではDjangoの各種設定を行っていきます。<br>
+											推奨・任意の設定項目ですが、要否をご確認いただきながら進めてください。</p>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="1. HTMLテンプレート設定（超絶推奨）" class="heading"
+											id="1._HTMLテンプレート設定（超絶推奨）">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>1. HTMLテンプレート設定（超絶推奨）
+										</h3>
+										<div class="heading-children">
+											<div>
+												<div data-callout-metadata="" data-callout-fold="" data-callout="info"
+													class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-info">
+																<circle cx="12" cy="12" r="10"></circle>
+																<path d="M12 16v-4"></path>
+																<path d="M12 8h.01"></path>
+															</svg></div>
+														<div class="callout-title-inner">こんな人は設定してください。</div>
+													</div>
+													<div class="callout-content">
+														<ul>
+															<li data-line="1">モダンなシステムを利用し、HTMLを部品化し、再利用したい</li>
+															<li data-line="2">結構たくさんなページを作成予定人</li>
+															<li data-line="3">「テンプレートシステムってなんや？」の人</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="a. ディレクトリの作成" class="heading" id="a._ディレクトリの作成">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>a. ディレクトリの作成
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>アプリケーション（本ページでは<code>blog</code>）のディレクトリ直下に<br>
+															<code>templates</code>ディレクトリを作成します。
+														</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded"><span class="token function">mkdir</span> temaemiso/blog/templates
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="b. プロジェクト設定ファイルの編集" class="heading"
+													id="b._プロジェクト設定ファイルの編集">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>b. プロジェクト設定ファイルの編集
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>上記で作成したディレクトリを<code>teamaemiso/settings.py</code>の<code>TEMPLATES</code>辞書に追加する。
+														</p>
+													</div>
+													<div>
+														<pre class="language-python" tabindex="0"><code class="language-python is-loaded">TEMPLATES <span class="token operator">=</span> <span class="token punctuation">[</span>
+<span class="token punctuation">{</span>
+	<span class="token string">"BACKEND"</span><span class="token punctuation">:</span> <span class="token string">"django.template.backends.django.DjangoTemplates"</span><span class="token punctuation">,</span>
+	<span class="token string">"DIRS"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+		<span class="token comment"># blog用templateフォルダ</span>
+		BASE_DIR<span class="token punctuation">.</span>joinpath<span class="token punctuation">(</span><span class="token string">"ap_login"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>joinpath<span class="token punctuation">(</span><span class="token string">"templates"</span><span class="token punctuation">)</span> <span class="token comment"># ★追加</span>
+	<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token string">"APP_DIRS"</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">,</span>
+	<span class="token string">"OPTIONS"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		<span class="token string">"context_processors"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+			<span class="token string">"django.template.context_processors.debug"</span><span class="token punctuation">,</span>
+			<span class="token string">"django.template.context_processors.request"</span><span class="token punctuation">,</span>
+			<span class="token string">"django.contrib.auth.context_processors.auth"</span><span class="token punctuation">,</span>
+			<span class="token string">"django.contrib.messages.context_processors.messages"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="c. テンプレートファイルの作成" class="heading"
+													id="c._テンプレートファイルの作成">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>c. テンプレートファイルの作成
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>次に、<code>blog/templates/blog_base.html</code>を作成し、以下のコードを記述する。
+														</p>
+													</div>
+													<div>
+														<pre class="language-html" tabindex="0"><code class="language-html is-loaded"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>{{ blog_title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>blog_title_here: {{ blog_title }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>paragraph<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="d. 画面のレンダリング（テンプレートへの値の反映&amp;レスポンス）" class="heading"
+													id="d._画面のレンダリング（テンプレートへの値の反映&amp;レスポンス）">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>d. 画面のレンダリング（テンプレートへの値の反映&amp;レスポンス）
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>最後に<code>blog/views.py</code>を以下のように編集してください。</p>
+													</div>
+													<div>
+														<pre class="language-python" tabindex="0"><code class="language-python is-loaded"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>template <span class="token keyword">import</span> loader
+
+
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+template <span class="token operator">=</span> loader<span class="token punctuation">.</span>get_template<span class="token punctuation">(</span><span class="token string">"blog_base.html"</span><span class="token punctuation">)</span>  <span class="token comment"># テンプレートをロードする</span>
+context <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token string">"blog_title"</span><span class="token punctuation">:</span> <span class="token string">"手前みそ"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>  <span class="token comment"># テンプレートに当てはめる値</span>
+<span class="token comment"># HTTPレスポンスとして返却</span>
+<span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>template<span class="token punctuation">.</span>render<span class="token punctuation">(</span>context<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<hr>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="2. DB設定" class="heading" id="2._DB設定">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>2. DB設定
+										</h3>
+										<div class="heading-children">
+											<div>
+												<div data-callout-metadata="" data-callout-fold="" data-callout="info"
+													class="callout">
+													<div class="callout-title">
+														<div class="callout-icon"><svg
+																xmlns="http://www.w3.org/2000/svg" width="24"
+																height="24" viewBox="0 0 24 24" fill="none"
+																stroke="currentColor" stroke-width="2"
+																stroke-linecap="round" stroke-linejoin="round"
+																class="svg-icon lucide-info">
+																<circle cx="12" cy="12" r="10"></circle>
+																<path d="M12 16v-4"></path>
+																<path d="M12 8h.01"></path>
+															</svg></div>
+														<div class="callout-title-inner">こんな人は設定してください。</div>
+													</div>
+													<div class="callout-content">
+														<p>DjangoデフォルトのsqliteではなくMySQLやPostgreSQLなどのDBを<br>
+															利用したい方。</p>
+														<p>※本ページではPostgreSQLの設定を紹介します。<br>
+															その他DBの設定については<a data-tooltip-position="top"
+																aria-label="https://docs.djangoproject.com/ja/5.0/topics/install/#get-your-database-running"
+																rel="noopener" class="external-link"
+																href="https://docs.djangoproject.com/ja/5.0/topics/install/#get-your-database-running"
+																target="_blank">公式ドキュメント</a>参照</p>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="a. PostgreSQLのインストール" class="heading"
+													id="a._PostgreSQLのインストール">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>a. PostgreSQLのインストール
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>以下の手順に沿って、お手持ちのPCへPostgres</p>
+													</div>
+													<div>
+														<ul>
+															<li data-line="0"><a data-tooltip-position="top"
+																	aria-label="https://qiita.com/tom-sato/items/037b8f8cb4b326710f71"
+																	rel="noopener" class="external-link"
+																	href="https://qiita.com/tom-sato/items/037b8f8cb4b326710f71"
+																	target="_blank">PostgreSQLのインストール</a></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="b. PostgreSQLにDBを作成" class="heading"
+													id="b._PostgreSQLにDBを作成">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>b. PostgreSQLにDBを作成
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>pgAdmin4（PostgreSQLのGUI）を起動するなどして、<br>
+															PostgreSQL上にDBを作成します。</p>
+													</div>
+													<div>
+														<div data-callout-metadata="" data-callout-fold=""
+															data-callout="info" class="callout">
+															<div class="callout-title">
+																<div class="callout-icon"><svg
+																		xmlns="http://www.w3.org/2000/svg" width="24"
+																		height="24" viewBox="0 0 24 24" fill="none"
+																		stroke="currentColor" stroke-width="2"
+																		stroke-linecap="round" stroke-linejoin="round"
+																		class="svg-icon lucide-info">
+																		<circle cx="12" cy="12" r="10"></circle>
+																		<path d="M12 16v-4"></path>
+																		<path d="M12 8h.01"></path>
+																	</svg></div>
+																<div class="callout-title-inner">
+																	PosstgreSQL上に、DjangoからアクセスするDBを作成します。</div>
+															</div>
+														</div>
+													</div>
+													<div>
+														<ul>
+															<li data-line="0">
+																<p>windowsキーを押して「pgAdmin」と打つと検索できます。<br>
+																	<span alt="Pasted image 20240414080317.png"
+																		src="Pasted image 20240414080317.png"
+																		class="internal-embed media-embed image-embed is-loaded"><img
+																			alt="Pasted image 20240414080317.png"
+																			src="05_programming/00_python/99_attachments/pasted-image-20240414080317.png"></span>
+																</p>
+															</li>
+															<li data-line="3">
+																<p>「Login/Gorup　Roles」を左クリックし、「Create」 &gt; 「Login/Group
+																	Role...」をクリック<br>
+																	<span alt="Pasted image 20240414081254.png"
+																		src="Pasted image 20240414081254.png"
+																		class="internal-embed media-embed image-embed is-loaded"><img
+																			alt="Pasted image 20240414081254.png"
+																			src="05_programming/00_python/99_attachments/pasted-image-20240414081254.png"></span>
+																</p>
+															</li>
+															<li data-line="6">
+																<p>任意のユーザ名を入力<br>
+																	<span alt="Pasted image 20240414081201.png"
+																		src="Pasted image 20240414081201.png"
+																		class="internal-embed media-embed image-embed is-loaded"><img
+																			alt="Pasted image 20240414081201.png"
+																			src="05_programming/00_python/99_attachments/pasted-image-20240414081201.png"></span>
+																</p>
+															</li>
+															<li data-line="9">
+																<p>「Privileges」タブへ移動し、「Can login?」にチェックを付けて、「Save」する<br>
+																	<span alt="Pasted image 20240414081214.png"
+																		src="Pasted image 20240414081214.png"
+																		class="internal-embed media-embed image-embed is-loaded"><img
+																			alt="Pasted image 20240414081214.png"
+																			src="05_programming/00_python/99_attachments/pasted-image-20240414081214.png"></span>
+																</p>
+															</li>
+															<li data-line="12">
+																<p>「Dadtabase」を左クリックし、「Create」 &gt;
+																	「Database...」をクリック<br>
+																	<span alt="Pasted image 20240414081134.png"
+																		src="Pasted image 20240414081134.png"
+																		class="internal-embed media-embed image-embed is-loaded"><img
+																			alt="Pasted image 20240414081134.png"
+																			src="05_programming/00_python/99_attachments/pasted-image-20240414081134.png"></span>
+																</p>
+															</li>
+														</ul>
+													</div>
+													<div>
+														<p>-　Ownerに先ほど作成したユーザ名を設定<br>
+															<span alt="Pasted image 20240414081513.png"
+																src="Pasted image 20240414081513.png"
+																class="internal-embed media-embed image-embed is-loaded"><img
+																	alt="Pasted image 20240414081513.png"
+																	src="05_programming/00_python/99_attachments/pasted-image-20240414081513.png"></span>
+														</p>
+													</div>
+													<div>
+														<hr>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="3. 管理者設定" class="heading" id="3._管理者設定">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>3. 管理者設定
+										</h3>
+										<div class="heading-children">
+											<div class="heading-wrapper">
+												<h4 data-heading="a. migrationを実行" class="heading" id="a._migrationを実行">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>a. migrationを実行
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>以下のコマンドを実行します。</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python manage.py migrate
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<p>migrate&nbsp;コマンドは&nbsp;INSTALLED_APPSの設定を参照するとともに、&nbsp;<code>temaemiso/settings.py</code>&nbsp;ファイルのデータベース設定に従って必要なすべてのデータベースのテーブルを作成します。
+														</p>
+													</div>
+													<div>
+														<p><span alt="Pasted image 20240414083547.png"
+																src="Pasted image 20240414083547.png"
+																class="internal-embed media-embed image-embed is-loaded"><img
+																	alt="Pasted image 20240414083547.png"
+																	src="05_programming/00_python/99_attachments/pasted-image-20240414083547.png"></span>
+														</p>
+													</div>
+													<div>
+														<hr>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="heading-wrapper">
+										<h3 data-heading="3. 管理者ユーザの作成" class="heading" id="3._管理者ユーザの作成">
+											<div class="heading-collapse-indicator collapse-indicator collapse-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+													viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+													class="svg-icon right-triangle">
+													<path d="M3 8L12 17L21 8"></path>
+												</svg></div>3. 管理者ユーザの作成
+										</h3>
+										<div class="heading-children">
+											<div class="heading-wrapper">
+												<h4 data-heading="a. 管理者ユーザの作成" class="heading" id="a._管理者ユーザの作成">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>a. 管理者ユーザの作成
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>以下のコマンドでプロジェクトに管理者ユーザを作成します。</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python manage.py createsuperuser
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<p>管理者の名前・メールアドレスは任意のユーザー名を入力します。</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">Username: tanukichi
+Email address: tanukichi@example.com
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<p>最後はパスワードの入力です。確認のため2回同じ入力を求められます。</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">Password: ************
+Password <span class="token punctuation">(</span>again<span class="token punctuation">)</span>: ***********
+Superuser created successfully.
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<p>「Superuser created successfully.」というメッセージが表示されていればOKです</p>
+													</div>
+												</div>
+											</div>
+											<div class="heading-wrapper">
+												<h4 data-heading="b. 管理画面へのログイン" class="heading" id="b._管理画面へのログイン">
+													<div
+														class="heading-collapse-indicator collapse-indicator collapse-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+															viewBox="0 0 24 24" fill="none" stroke="currentColor"
+															stroke-width="2" stroke-linecap="round"
+															stroke-linejoin="round" class="svg-icon right-triangle">
+															<path d="M3 8L12 17L21 8"></path>
+														</svg></div>b. 管理画面へのログイン
+												</h4>
+												<div class="heading-children">
+													<div>
+														<p>Djangoでは特に設定していなければデフォルトで管理画面が利用できます。<br>
+															管理画面ではDBへのデータの登録や認証したユーザの管理などを行うことができます。</p>
+													</div>
+													<div>
+														<p>以下のコマンドでDjangoを起動してください。</p>
+													</div>
+													<div>
+														<pre class="language-shell" tabindex="0"><code class="language-shell is-loaded">poetry run python manage.py runserver
+</code><button class="copy-code-button">コピー</button></pre>
+													</div>
+													<div>
+														<p>起動後、<a data-tooltip-position="top"
+																aria-label="http://127.0.0.1:8000/admin" rel="noopener"
+																class="external-link" href="http://127.0.0.1:8000/admin"
+																target="_blank">管理画面</a>へアクセスしてください。<br>
+															<span alt="Pasted image 20240414084944.png"
+																src="Pasted image 20240414084944.png"
+																class="internal-embed media-embed image-embed is-loaded"><img
+																	alt="Pasted image 20240414084944.png"
+																	src="05_programming/00_python/99_attachments/pasted-image-20240414084944.png"></span>
+														</p>
+													</div>
+													<div>
+														<p>上記のような画面が出てきますので、<br>
+															「a. 管理者ユーザの作成」で作成したユーザ情報でログインしてください。<br>
+															ログインできたら完了です！お疲れ様でした！</p>
+													</div>
+													<div class="mod-footer"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

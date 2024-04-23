@@ -123,7 +123,7 @@ pre {
     /* 警告の下部余白 */
 }
 
-.callout p {
+.callout p, ul, code, span {
     color: #4d4d4d;
 }
 
@@ -138,7 +138,11 @@ code {
     border-radius: 3px;
 }
 
-.language-shell {
+.language-shell,
+.language-python,
+.language-text,
+.language-html {
+    color: #4d4d4d;
     position: relative;
     display: flex;
     padding: 10px;
