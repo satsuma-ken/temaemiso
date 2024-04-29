@@ -1,20 +1,28 @@
 from django.http import HttpResponse
 from django.template import loader, Template
 from temaemiso.blog.models import Article
+from bs4 import BeautifulSoup
 
 # 記事が見つからなかった時のとりあえず表示する記事ID
 ERROR_ARTICLE_ID = 1
 
 
 def index(request):
-    articles = search_article_by_new()
-    for article in articles:
-        print(article)
     template = loader.get_template("blog_home.html")  # テンプレートをロードする
+    articles = search_article_by_new()
+    disp_contents = []
+    for article in articles:
+        print(f"pk: {article.pk}")
+        soup = BeautifulSoup(article.content_set.values_list("content", flat=True)[0])
+        body_inner_html = soup.body.decode_contents()
+        disp_contents.append({"pk": article.pk, "html": body_inner_html})
+        # disp_contents.append(article.content_set.values_list("content", flat=True)[0])
     context = {
+        "is_home": True,
         "blog_title": "手前みそブログ",
         "topic_disp": True,
         "test_flag": False,
+        "disp_contents": disp_contents,
     }  # テンプレートに当てはめる値
     # HTTPレスポンスとして返却
     return HttpResponse(template.render(context, request))
@@ -26,6 +34,7 @@ def article(request, article_id: int = 1):
     disp_article_title = disp_article.article_title
     disp_content_string = disp_article.content_set.values_list("content", flat=True)[0]
     context = {
+        "is_home": False,
         "blog_title": "手前みそブログ",
         "blog_content_title": disp_article_title,
         "blog_content": disp_content_string,
