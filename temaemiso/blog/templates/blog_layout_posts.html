@@ -4,7 +4,7 @@
     <!-- 記事用のコンテンツ表示 -->
     {{ disp_content.html | safe }}
     <div class="gradient-cover"></div>
-    <a class="fix-bottom-link" href="{% url 'article' article_id=disp_content.pk  %}">続きを読む！</a>
+    <a class="fix-bottom-link" href="{% url 'article' article_id=disp_content.pk  %}">全文を読む！</a>
 </article>
 
 {% endfor %}
