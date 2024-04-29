@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 function setCodeCopyBehavior() {
     preList = document.querySelectorAll(":not(.is-loaded).language-shell");
+    console.log("preList", preList);
     preList.forEach(function (element) {
         // コピーボタンの要素を取得
         copyButton = element.querySelector(".copy-code-button");
         copyButton.onclick = function () {
             // codeタグのinnerTextを取得
-            code = element.querySelector(".is-loaded.language-shell").innerText;
+            code = element.querySelector("span").innerText;
             // クリップボードへ保管
             navigator.clipboard.writeText(code);
             // toastrを設定

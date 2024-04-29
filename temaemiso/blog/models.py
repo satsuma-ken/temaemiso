@@ -14,6 +14,14 @@ class BaseModel(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
+class ArticleManager(models.Manager):
+    def get_latest_three_articles(self):
+        return (
+            self.get_queryset()
+            .order_by("-publish_date")[:3]
+        )
+
+
 class Article(BaseModel):
     DEFAULT_DATETIME = datetime(2099, 12, 31, 0, 0, 0)
     datetime_now = datetime.now()
@@ -21,8 +29,12 @@ class Article(BaseModel):
     class Meta:
         db_table = "article"
 
+    objects = ArticleManager()
+
     article_id = models.AutoField(primary_key=True)
-    article_title = models.CharField(max_length=255, default=f"article_{datetime_now:%Y-%m-%d_%H%M%S}")
+    article_title = models.CharField(
+        max_length=255, default=f"article_{datetime_now:%Y-%m-%d_%H%M%S}"
+    )
     article_overview = models.TextField(default="")
     publish_date = models.DateTimeField(default=DEFAULT_DATETIME)
     expire_date = models.DateTimeField(default=DEFAULT_DATETIME)
