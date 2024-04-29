@@ -15,11 +15,18 @@ class BaseModel(models.Model):
 
 
 class ArticleManager(models.Manager):
-    def get_latest_three_articles(self):
-        return (
-            self.get_queryset()
-            .order_by("-publish_date")[:3]
-        )
+    def get_articles_order_by_publish_date(self):
+        return self.get_queryset().order_by("-publish_date")
+
+
+class Tag(BaseModel):
+    class Meta:
+        db_table = "tag"
+
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
 
 
 class Article(BaseModel):
@@ -38,6 +45,7 @@ class Article(BaseModel):
     article_overview = models.TextField(default="")
     publish_date = models.DateTimeField(default=DEFAULT_DATETIME)
     expire_date = models.DateTimeField(default=DEFAULT_DATETIME)
+    tags = models.ManyToManyField(Tag)
 
 
 class Content(BaseModel):
