@@ -8,11 +8,15 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 django = "^5.0.4"
-psycopg2 = "^2.9.9"
 gunicorn = "^22.0.0"
 django-bootstrap5 = "^24.1"
 pymemcache = "^4.0.0"
+bs4 = "^0.0.2"
+psycopg2-binary = "^2.9.9"
 
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
 
 [build-system]
 requires = ["poetry-core"]

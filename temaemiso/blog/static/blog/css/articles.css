@@ -25,6 +25,11 @@ li {
     margin-bottom: 5px;
 }
 
+.publish img {
+    width: 100%;
+    height: auto;
+}
+
 /* プロパティのスタイル */
 .metadata-container {
     margin-top: 10px;
@@ -103,14 +108,14 @@ pre {
     }
 
     &[data-callout="tips"] {
-        background-color: #9bc9ff;
+        background-color: #b3d7ff;
         /* 警告の背景色 */
         border: 1px solid #086ddd;
         color: #1a57ff;
     }
 
     &[data-callout="info"] {
-        background-color: #9bc9ff;
+        background-color: #b3d7ff;
         /* 警告の背景色 */
         border: 1px solid #086ddd;
         color: #1a57ff;
@@ -123,7 +128,10 @@ pre {
     /* 警告の下部余白 */
 }
 
-.callout p, ul, code, span {
+.callout p,
+ul,
+code,
+span {
     color: #4d4d4d;
 }
 
@@ -145,7 +153,7 @@ code {
     color: #4d4d4d;
     position: relative;
     display: flex;
-    padding: 10px;
+    padding: 20px;
     align-items: center;
     width: 100%;
 }
@@ -159,7 +167,7 @@ code {
     /* 右側に配置 */
     padding: 2px 5px;
     /* ボタンの余白 */
-    background-color: #007bff;
+    background-color: #a0a0a0;
     /* ボタンの背景色 */
     color: #fff;
     /* ボタンの文字色 */
@@ -172,11 +180,11 @@ code {
     justify-content: flex-end;
 
     &:hover {
-        background-color: #51a5ff;
+        background-color: #464646;
     }
 
     &:active {
-        background-color: #004794;
+        background-color: #3a3a3a;
     }
 }
 
