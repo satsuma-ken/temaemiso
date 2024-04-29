@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("yahoo");
     setCodeCopyBehavior();
 });
 
@@ -7,12 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
  * コピーボタンの挙動
  */
 function setCodeCopyBehavior() {
-    preList = document.querySelectorAll(":not(.is-loaded).language-shell");
+    // preList = document.querySelectorAll(":not(.is-loaded).language-shell");
+    preList = document.querySelectorAll("pre");
     preList.forEach(function (element) {
         // コピーボタンの要素を取得
         copyButton = element.querySelector(".copy-code-button");
         copyButton.onclick = function () {
             // codeタグのinnerTextを取得
+            console.log("element", element);
             code = element.querySelector("span").innerText;
             // クリップボードへ保管
             navigator.clipboard.writeText(code);
