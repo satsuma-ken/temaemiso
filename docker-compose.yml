@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  # Cloud SQLへの接続
+  db:
+    image: gcr.io/cloudsql-docker/gce-proxy:latest
+    container_name: cloud_sql_auth_proxy
+    volumes:
+      - ./credentials:/config
+    command:
+      - "/cloud_sql_proxy"
+      - "-instances=temaemiso-temae:asia-northeast1:instance-misooke=tcp:0.0.0.0:5432"
+      - "-credential_file=/config/temaemiso-temae-f38d76a4c0c2.json"
+    ports:
+      - "5432:5432"
+
+  # Django application
+  app:
+    container_name: django_app
+    build: .
+    environment:
+      DB_USER: misooke_admin
+      DB_HOST: cloud_sql_auth_proxy
+      DB_PORT: 5432
+      DB_PASSWORD: vihCRdd9fcWUkoE
+      DB_NAME: misooke
+      DB_NAME_TEST: djangodb_test
+    volumes:
+      - .:/app
+    command:
+        # bash -c "gunicorn --config ./gunicorn/settings.py temaemiso.wsgi:application --bind 0.0.0.0:7001"
+        # bash -c "
+        # python manage.py makemigrations &&
+        # python manage.py migrate &&
+        # gunicorn --config ./gunicorn/settings.py temaemiso.wsgi:application --bind 0.0.0.0:7001
+        # "
+        bash -c "python manage.py runserver 0.0.0.0:8000" # 開発用コード
+    # 開発用コード
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7001/"]
+      timeout: 5s
+      retries: 3
+      interval: 10s
+
+  # Nginx
+  # web:
+  #   container_name: nginx
+  #   image: nginx:1.21.3
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - "./nginx/default.conf:/etc/nginx/conf.d/default.conf"
+  #     - "./www/:/var/www/"
+  #   depends_on:
+  #     app:
+  #         condition: service_healthy

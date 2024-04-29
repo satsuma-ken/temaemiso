@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_bootstrap5",
+    "temaemiso.blog",
 ]
 
 MIDDLEWARE = [
@@ -47,17 +50,23 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "django.middleware.locale.LocaleMiddleware", # 多言語対応で追加
+    "django.middleware.locale.LocaleMiddleware",  # 多言語対応で追加
 ]
 
 ROOT_URLCONF = "temaemiso.urls"
 
+# cacheを利用できるようにする
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.memcached.PyMemcacheCache",
+        "LOCATION": "127.0.0.1:11211",
+    }
+}
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [
-            BASE_DIR.joinpath("temaemiso").joinpath("blog").joinpath("templates")
-        ],
+        "DIRS": [BASE_DIR.joinpath("temaemiso").joinpath("blog").joinpath("templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -70,20 +79,22 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = "temaemiso.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DB設定はDockerに記述
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "misooke",
-        "USER": "misooke_admin",
-        "PASSWORD": "vihCRdd9fcWUkoE",
-        "HOST": "",
-        "PORT": "",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": os.environ.get("DB_NAME", "default_db_name"),  # デフォルト値は省略可
+        "USER": os.environ.get("DB_USER", "default_user"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "default_password"),
+        "HOST": os.environ.get("DB_HOST", "db"),  # Docker Composeで定義したサービス名
+        "PORT": os.environ.get("DB_PORT", "5432"),  # PostgreSQLのデフォルトポート
     }
 }
 
@@ -123,6 +134,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = "./www/statics/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
