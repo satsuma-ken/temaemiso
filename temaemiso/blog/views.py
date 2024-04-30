@@ -12,8 +12,7 @@ def index(request):
     articles = search_article_by_new()
     disp_contents = []
     for article in articles[:3]:
-        print(f"pk: {article.pk}")
-        soup = BeautifulSoup(article.content_set.values_list("content", flat=True)[0])
+        soup = BeautifulSoup(article.content_set.values_list("content", flat=True)[0], 'html.parser')
         body_inner_html = soup.body.decode_contents()
         disp_contents.append({"pk": article.pk, "html": body_inner_html})
         # disp_contents.append(article.content_set.values_list("content", flat=True)[0])
